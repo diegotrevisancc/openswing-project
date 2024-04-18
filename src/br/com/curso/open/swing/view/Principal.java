@@ -4,6 +4,7 @@
  */
 package br.com.curso.open.swing.view;
 
+import br.com.curso.open.swing.controller.FuncionarioGridController;
 import br.com.curso.open.swing.util.Util;
 import br.com.curso.open.swing.util.Dominios;
 import java.awt.event.KeyEvent;
@@ -24,6 +25,7 @@ import org.openswing.swing.util.client.ClientSettings;
  */
 public class Principal extends javax.swing.JFrame {
     public Login login;
+    public FuncionarioGridController funcionarioGridController;
     /**
      * Creates new form Principal
      */
@@ -111,7 +113,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        if(this.funcionarioGridController == null) {
+            this.funcionarioGridController = new FuncionarioGridController();
+        } else {
+            this.funcionarioGridController.getView().setVisible(true);
+        }
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
