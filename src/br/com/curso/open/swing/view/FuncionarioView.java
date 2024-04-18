@@ -5,6 +5,15 @@
 package br.com.curso.open.swing.view;
 
 import br.com.curso.open.swing.controller.FuncionarioGridController;
+import br.com.curso.open.swing.util.Util;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ListSelectionModel;
+import javax.swing.text.MaskFormatter;
+import org.openswing.swing.client.GridControl;
+import org.openswing.swing.lookup.client.LookupController;
+
 
 /**
  *
@@ -16,7 +25,11 @@ public class FuncionarioView extends javax.swing.JFrame {
      * Creates new form FuncionarioView
      */
     public FuncionarioView() {
-        initComponents();
+        initComponents();        
+        this.organizarDomain();
+        this.organizarMascaras();
+        this.organizarLookup();
+
     }
 
     /**
@@ -194,4 +207,35 @@ public class FuncionarioView extends javax.swing.JFrame {
     private org.openswing.swing.table.columns.client.TextColumn textColumnNome;
     private org.openswing.swing.table.columns.client.TextColumn textColumnNumero;
     // End of variables declaration//GEN-END:variables
+    private void organizarDomain() {
+        
+        this.comboColumnSexo.setDomainId("SEXO");
+        this.comboColumnUf.setDomainId("UF");
+    }
+    
+    private void organizarMascaras() {
+        
+        try {
+            
+            MaskFormatter mascara = new MaskFormatter("##.###-###");
+            mascara.setPlaceholderCharacter('_');
+            mascara.setValidCharacters("0123456789");
+            this.formattedTextColumnCep.setFormatter(mascara);
+        } catch (Exception ex) {
+            
+            Logger.getLogger(FuncionarioView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    private void organizarLookup() {
+        
+        this.codLookupColumnCargo.setLookupController(new LookupController());
+    }
+    
+    public GridControl getGridControlFuncionario() {
+        
+        return gridControl1;
+    }
+
 }
+
