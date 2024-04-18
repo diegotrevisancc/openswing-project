@@ -4,12 +4,14 @@
  */
 package br.com.curso.open.swing.view;
 
+import br.com.curso.open.swing.util.Util;
+
 /**
  *
  * @author diego
  */
 public class Login extends javax.swing.JFrame {
-
+    Principal principal;
     /**
      * Creates new form Login
      */
@@ -33,21 +35,23 @@ public class Login extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        nameField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(370, 240));
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(370, 240));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255), 2));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jPanel5.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel5.setBackground(new java.awt.Color(51, 153, 255));
         jPanel5.setMinimumSize(new java.awt.Dimension(100, 100));
         jPanel5.setPreferredSize(new java.awt.Dimension(100, 100));
         jPanel5.setLayout(new java.awt.GridBagLayout());
@@ -70,7 +74,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jPanel5, gridBagConstraints);
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel3.setBackground(new java.awt.Color(51, 153, 255));
         jPanel3.setMinimumSize(new java.awt.Dimension(100, 100));
         jPanel3.setPreferredSize(new java.awt.Dimension(100, 100));
         jPanel3.setLayout(new java.awt.GridBagLayout());
@@ -88,20 +92,26 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         jPanel3.add(jLabel3, gridBagConstraints);
+
+        nameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameFieldActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(jTextField1, gridBagConstraints);
+        jPanel3.add(nameField, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(jPasswordField1, gridBagConstraints);
+        jPanel3.add(passwordField, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -117,6 +127,11 @@ public class Login extends javax.swing.JFrame {
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
         jButton1.setText("Entrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
@@ -124,6 +139,11 @@ public class Login extends javax.swing.JFrame {
         jPanel4.add(jButton1, gridBagConstraints);
 
         jButton2.setText("Sair");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -150,6 +170,27 @@ public class Login extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if (Util.getAlerta().alertPerguta("Deseja realmente fechar?")) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (this.validarLogin()) {
+            if (this.principal == null) {
+                this.principal = new Principal(this);
+            }
+            this.dispose(); // destroy login screen, avoid memory usage.
+            principal.setVisible(true);
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,7 +237,21 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField nameField;
+    private javax.swing.JPasswordField passwordField;
     // End of variables declaration//GEN-END:variables
+    private boolean validarLogin() {
+        
+        if (!this.nameField.getText().trim().equals("admin") || !this.passwordField.getText().trim().equals("admin")) {
+            this.nameField.setText("");
+            this.passwordField.setText("");
+            this.nameField.requestFocus();
+            
+            Util.getAlerta().alertNormal("Login ou senha incorretos!");
+            return false;
+        }
+        
+        return true;
+    }
 }
+
