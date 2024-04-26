@@ -43,6 +43,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
+        reloadButton1 = new org.openswing.swing.client.ReloadButton();
         jPanel2 = new javax.swing.JPanel();
         gridControlFuncionario = new org.openswing.swing.client.GridControl();
         textColumnNome = new org.openswing.swing.table.columns.client.TextColumn();
@@ -66,6 +67,8 @@ public class FuncionarioView extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(40, 40));
         jPanel1.setMinimumSize(new java.awt.Dimension(40, 40));
         jPanel1.setPreferredSize(new java.awt.Dimension(40, 40));
+        jPanel1.add(reloadButton1);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -79,51 +82,73 @@ public class FuncionarioView extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(40, 40));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
+        gridControlFuncionario.setReloadButton(this.reloadButton1);
         gridControlFuncionario.setSingleExpandableRow(true);
         gridControlFuncionario.setValueObjectClassName("br.com.curso.open.swing.vo.FuncionarioVo");
 
+        textColumnNome.setColumnFilterable(true);
         textColumnNome.setColumnName("nome");
+        textColumnNome.setColumnSortable(true);
         textColumnNome.setHeaderColumnName("Nome");
         gridControlFuncionario.getColumnContainer().add(textColumnNome);
 
+        comboColumnSexo.setColumnFilterable(true);
         comboColumnSexo.setColumnName("sexo");
+        comboColumnSexo.setColumnSortable(true);
         comboColumnSexo.setHeaderColumnName("Sexo");
         gridControlFuncionario.getColumnContainer().add(comboColumnSexo);
 
         currencyColumnSalario.setColumnFilterable(true);
         currencyColumnSalario.setColumnName("salario");
+        currencyColumnSalario.setColumnSortable(true);
         currencyColumnSalario.setHeaderColumnName("Salário");
         gridControlFuncionario.getColumnContainer().add(currencyColumnSalario);
 
+        dateColumnDataEntrada.setColumnFilterable(true);
         dateColumnDataEntrada.setColumnName("data_de_entrada");
+        dateColumnDataEntrada.setColumnSortable(true);
         dateColumnDataEntrada.setHeaderColumnName("Data de Entrada");
         gridControlFuncionario.getColumnContainer().add(dateColumnDataEntrada);
 
+        dateColumnDataSaida.setColumnFilterable(true);
         dateColumnDataSaida.setColumnName("data_de_saida");
+        dateColumnDataSaida.setColumnSortable(true);
         dateColumnDataSaida.setHeaderColumnName("Data de Saida");
         gridControlFuncionario.getColumnContainer().add(dateColumnDataSaida);
 
+        textColumnCidade.setColumnFilterable(true);
         textColumnCidade.setColumnName("cidade");
+        textColumnCidade.setColumnSortable(true);
         textColumnCidade.setHeaderColumnName("Cidade");
         gridControlFuncionario.getColumnContainer().add(textColumnCidade);
 
+        textColumnLogradouro.setColumnFilterable(true);
         textColumnLogradouro.setColumnName("logradouro");
+        textColumnLogradouro.setColumnSortable(true);
         textColumnLogradouro.setHeaderColumnName("Logradouro");
         gridControlFuncionario.getColumnContainer().add(textColumnLogradouro);
 
+        textColumnNumero.setColumnFilterable(true);
         textColumnNumero.setColumnName("numero");
+        textColumnNumero.setColumnSortable(true);
         textColumnNumero.setHeaderColumnName("Numero");
         gridControlFuncionario.getColumnContainer().add(textColumnNumero);
 
+        textColumnComplemento.setColumnFilterable(true);
         textColumnComplemento.setColumnName("complemento");
+        textColumnComplemento.setColumnSortable(true);
         textColumnComplemento.setHeaderColumnName("Complemento");
         gridControlFuncionario.getColumnContainer().add(textColumnComplemento);
 
+        textColumnBairro.setColumnFilterable(true);
         textColumnBairro.setColumnName("bairro");
+        textColumnBairro.setColumnSortable(true);
         textColumnBairro.setHeaderColumnName("Bairro");
         gridControlFuncionario.getColumnContainer().add(textColumnBairro);
 
+        comboColumnUf.setColumnFilterable(true);
         comboColumnUf.setColumnName("uf");
+        comboColumnUf.setColumnSortable(true);
         comboColumnUf.setHeaderColumnName("UF");
         comboColumnUf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,11 +157,15 @@ public class FuncionarioView extends javax.swing.JFrame {
         });
         gridControlFuncionario.getColumnContainer().add(comboColumnUf);
 
+        formattedTextColumnCep.setColumnFilterable(true);
         formattedTextColumnCep.setColumnName("cep");
+        formattedTextColumnCep.setColumnSortable(true);
         formattedTextColumnCep.setHeaderColumnName("CEP");
         gridControlFuncionario.getColumnContainer().add(formattedTextColumnCep);
 
+        codLookupColumnCargo.setColumnFilterable(true);
         codLookupColumnCargo.setColumnName("cargo");
+        codLookupColumnCargo.setColumnSortable(true);
         codLookupColumnCargo.setEnableCodBox(false);
         codLookupColumnCargo.setHeaderColumnName("Cargo");
         gridControlFuncionario.getColumnContainer().add(codLookupColumnCargo);
@@ -209,6 +238,7 @@ public class FuncionarioView extends javax.swing.JFrame {
     private org.openswing.swing.client.GridControl gridControlFuncionario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private org.openswing.swing.client.ReloadButton reloadButton1;
     private org.openswing.swing.table.columns.client.TextColumn textColumnBairro;
     private org.openswing.swing.table.columns.client.TextColumn textColumnCidade;
     private org.openswing.swing.table.columns.client.TextColumn textColumnComplemento;
