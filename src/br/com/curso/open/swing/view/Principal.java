@@ -31,7 +31,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal(Login login) {
         this.login = login;
-        
+        this.configurarOpenSwing();
         initComponents();
     }
 

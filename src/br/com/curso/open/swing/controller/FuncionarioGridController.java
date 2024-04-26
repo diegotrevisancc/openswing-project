@@ -7,6 +7,7 @@ package br.com.curso.open.swing.controller;
 import br.com.curso.open.swing.dao.FuncionarioDao;
 import br.com.curso.open.swing.util.Util;
 import br.com.curso.open.swing.view.FuncionarioView;
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +16,7 @@ import org.openswing.swing.message.receive.java.Response;
 import org.openswing.swing.message.receive.java.VOListResponse;
 import org.openswing.swing.message.send.java.GridParams;
 import org.openswing.swing.table.client.GridController;
+
 import org.openswing.swing.table.java.GridDataLocator;
 
 /**
@@ -31,6 +33,7 @@ public class FuncionarioGridController extends GridController implements GridDat
         this.view.getGridControlFuncionario().setController(FuncionarioGridController.this);
         this.view.getGridControlFuncionario().setGridDataLocator(FuncionarioGridController.this);
         this.view.setVisible(true);
+        this.view.getGridControlFuncionario().getTable().setDimensionFilterDialog(new Dimension(480, 500));
     }
 
     @Override

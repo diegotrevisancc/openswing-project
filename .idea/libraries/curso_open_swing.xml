@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="curso-open-swing">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/curso-open-swing.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

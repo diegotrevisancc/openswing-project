@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/lib/srccommonos.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/itext-1.4.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/iText-rtf-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/pooler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/log4j-1.2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jnlp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/srcclientos.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/JTattoo-1.6.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commonos.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/BeanInfo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/postgresql-42.7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/srcserveros.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/clientos.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jcalendar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/hessian-3.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/hsqldb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/iText-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/open-swing-img.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/serveros.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jnlp-servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/poi-2.0-RC2-20040102.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -70,7 +70,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
       <SubComponents>
-        <Container class="org.openswing.swing.client.GridControl" name="gridControl1">
+        <Container class="org.openswing.swing.client.GridControl" name="gridControlFuncionario">
           <Properties>
             <Property name="singleExpandableRow" type="boolean" value="true"/>
             <Property name="valueObjectClassName" type="java.lang.String" value="br.com.curso.open.swing.vo.FuncionarioVo"/>
@@ -175,6 +175,9 @@
                 </Property>
                 <Property name="headerColumnName" type="java.lang.String" value="UF"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboColumnUfActionPerformed"/>
+              </Events>
             </Component>
             <Component class="org.openswing.swing.table.columns.client.FormattedTextColumn" name="formattedTextColumnCep">
               <Properties>

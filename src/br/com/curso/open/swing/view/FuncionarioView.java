@@ -44,7 +44,7 @@ public class FuncionarioView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        gridControl1 = new org.openswing.swing.client.GridControl();
+        gridControlFuncionario = new org.openswing.swing.client.GridControl();
         textColumnNome = new org.openswing.swing.table.columns.client.TextColumn();
         comboColumnSexo = new org.openswing.swing.table.columns.client.ComboColumn();
         currencyColumnSalario = new org.openswing.swing.table.columns.client.CurrencyColumn();
@@ -79,68 +79,73 @@ public class FuncionarioView extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(40, 40));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
-        gridControl1.setSingleExpandableRow(true);
-        gridControl1.setValueObjectClassName("br.com.curso.open.swing.vo.FuncionarioVo");
+        gridControlFuncionario.setSingleExpandableRow(true);
+        gridControlFuncionario.setValueObjectClassName("br.com.curso.open.swing.vo.FuncionarioVo");
 
         textColumnNome.setColumnName("nome");
         textColumnNome.setHeaderColumnName("Nome");
-        gridControl1.getColumnContainer().add(textColumnNome);
+        gridControlFuncionario.getColumnContainer().add(textColumnNome);
 
         comboColumnSexo.setColumnName("sexo");
         comboColumnSexo.setHeaderColumnName("Sexo");
-        gridControl1.getColumnContainer().add(comboColumnSexo);
+        gridControlFuncionario.getColumnContainer().add(comboColumnSexo);
 
         currencyColumnSalario.setColumnFilterable(true);
         currencyColumnSalario.setColumnName("salario");
         currencyColumnSalario.setHeaderColumnName("Salário");
-        gridControl1.getColumnContainer().add(currencyColumnSalario);
+        gridControlFuncionario.getColumnContainer().add(currencyColumnSalario);
 
         dateColumnDataEntrada.setColumnName("data_de_entrada");
         dateColumnDataEntrada.setHeaderColumnName("Data de Entrada");
-        gridControl1.getColumnContainer().add(dateColumnDataEntrada);
+        gridControlFuncionario.getColumnContainer().add(dateColumnDataEntrada);
 
         dateColumnDataSaida.setColumnName("data_de_saida");
         dateColumnDataSaida.setHeaderColumnName("Data de Saida");
-        gridControl1.getColumnContainer().add(dateColumnDataSaida);
+        gridControlFuncionario.getColumnContainer().add(dateColumnDataSaida);
 
         textColumnCidade.setColumnName("cidade");
         textColumnCidade.setHeaderColumnName("Cidade");
-        gridControl1.getColumnContainer().add(textColumnCidade);
+        gridControlFuncionario.getColumnContainer().add(textColumnCidade);
 
         textColumnLogradouro.setColumnName("logradouro");
         textColumnLogradouro.setHeaderColumnName("Logradouro");
-        gridControl1.getColumnContainer().add(textColumnLogradouro);
+        gridControlFuncionario.getColumnContainer().add(textColumnLogradouro);
 
         textColumnNumero.setColumnName("numero");
         textColumnNumero.setHeaderColumnName("Numero");
-        gridControl1.getColumnContainer().add(textColumnNumero);
+        gridControlFuncionario.getColumnContainer().add(textColumnNumero);
 
         textColumnComplemento.setColumnName("complemento");
         textColumnComplemento.setHeaderColumnName("Complemento");
-        gridControl1.getColumnContainer().add(textColumnComplemento);
+        gridControlFuncionario.getColumnContainer().add(textColumnComplemento);
 
         textColumnBairro.setColumnName("bairro");
         textColumnBairro.setHeaderColumnName("Bairro");
-        gridControl1.getColumnContainer().add(textColumnBairro);
+        gridControlFuncionario.getColumnContainer().add(textColumnBairro);
 
         comboColumnUf.setColumnName("uf");
         comboColumnUf.setHeaderColumnName("UF");
-        gridControl1.getColumnContainer().add(comboColumnUf);
+        comboColumnUf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboColumnUfActionPerformed(evt);
+            }
+        });
+        gridControlFuncionario.getColumnContainer().add(comboColumnUf);
 
         formattedTextColumnCep.setColumnName("cep");
         formattedTextColumnCep.setHeaderColumnName("CEP");
-        gridControl1.getColumnContainer().add(formattedTextColumnCep);
+        gridControlFuncionario.getColumnContainer().add(formattedTextColumnCep);
 
         codLookupColumnCargo.setColumnName("cargo");
         codLookupColumnCargo.setEnableCodBox(false);
         codLookupColumnCargo.setHeaderColumnName("Cargo");
-        gridControl1.getColumnContainer().add(codLookupColumnCargo);
+        gridControlFuncionario.getColumnContainer().add(codLookupColumnCargo);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
-        jPanel2.add(gridControl1, gridBagConstraints);
+        jPanel2.add(gridControlFuncionario, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -153,6 +158,10 @@ public class FuncionarioView extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(681, 308));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void comboColumnUfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboColumnUfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboColumnUfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,7 +206,7 @@ public class FuncionarioView extends javax.swing.JFrame {
     private org.openswing.swing.table.columns.client.DateColumn dateColumnDataEntrada;
     private org.openswing.swing.table.columns.client.DateColumn dateColumnDataSaida;
     private org.openswing.swing.table.columns.client.FormattedTextColumn formattedTextColumnCep;
-    private org.openswing.swing.client.GridControl gridControl1;
+    private org.openswing.swing.client.GridControl gridControlFuncionario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private org.openswing.swing.table.columns.client.TextColumn textColumnBairro;
@@ -212,6 +221,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         this.comboColumnSexo.setDomainId("SEXO");
         this.comboColumnUf.setDomainId("UF");
     }
+
     
     private void organizarMascaras() {
         
@@ -234,7 +244,7 @@ public class FuncionarioView extends javax.swing.JFrame {
     
     public GridControl getGridControlFuncionario() {
         
-        return gridControl1;
+        return gridControlFuncionario;
     }
 
 }
