@@ -47,6 +47,10 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
       <SubComponents>
+        <Component class="org.openswing.swing.client.SaveButton" name="saveButton1">
+        </Component>
+        <Component class="org.openswing.swing.client.InsertButton" name="insertButton1">
+        </Component>
         <Component class="org.openswing.swing.client.ReloadButton" name="reloadButton1">
         </Component>
       </SubComponents>
@@ -76,8 +80,14 @@
       <SubComponents>
         <Container class="org.openswing.swing.client.GridControl" name="gridControlFuncionario">
           <Properties>
+            <Property name="insertButton" type="org.openswing.swing.client.InsertButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="this.insertButton1" type="code"/>
+            </Property>
             <Property name="reloadButton" type="org.openswing.swing.client.ReloadButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="this.reloadButton1" type="code"/>
+            </Property>
+            <Property name="saveButton" type="org.openswing.swing.client.SaveButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="this.saveButton1" type="code"/>
             </Property>
             <Property name="singleExpandableRow" type="boolean" value="true"/>
             <Property name="valueObjectClassName" type="java.lang.String" value="br.com.curso.open.swing.vo.FuncionarioVo"/>
@@ -101,6 +111,7 @@
                   <Connection code="&quot;nome&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Nome"/>
               </Properties>
             </Component>
@@ -111,6 +122,7 @@
                   <Connection code="&quot;sexo&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Sexo"/>
               </Properties>
             </Component>
@@ -120,7 +132,9 @@
                 <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;salario&quot;" type="code"/>
                 </Property>
+                <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Sal&#xe1;rio"/>
               </Properties>
             </Component>
@@ -131,6 +145,7 @@
                   <Connection code="&quot;data_de_entrada&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Data de Entrada"/>
               </Properties>
             </Component>
@@ -140,7 +155,9 @@
                 <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;data_de_saida&quot;" type="code"/>
                 </Property>
+                <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Data de Saida"/>
               </Properties>
             </Component>
@@ -151,6 +168,7 @@
                   <Connection code="&quot;cidade&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Cidade"/>
               </Properties>
             </Component>
@@ -161,6 +179,7 @@
                   <Connection code="&quot;logradouro&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Logradouro"/>
               </Properties>
             </Component>
@@ -170,7 +189,9 @@
                 <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;numero&quot;" type="code"/>
                 </Property>
+                <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Numero"/>
               </Properties>
             </Component>
@@ -180,7 +201,9 @@
                 <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;complemento&quot;" type="code"/>
                 </Property>
+                <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Complemento"/>
               </Properties>
             </Component>
@@ -191,6 +214,7 @@
                   <Connection code="&quot;bairro&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Bairro"/>
               </Properties>
             </Component>
@@ -201,6 +225,7 @@
                   <Connection code="&quot;uf&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="UF"/>
               </Properties>
               <Events>
@@ -213,7 +238,9 @@
                 <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;cep&quot;" type="code"/>
                 </Property>
+                <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="CEP"/>
               </Properties>
             </Component>
@@ -223,7 +250,9 @@
                 <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;cargo&quot;" type="code"/>
                 </Property>
+                <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="enableCodBox" type="boolean" value="false"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Cargo"/>
               </Properties>
