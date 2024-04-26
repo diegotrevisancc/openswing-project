@@ -47,7 +47,11 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
       <SubComponents>
+        <Component class="org.openswing.swing.client.FilterButton" name="filterButton1">
+        </Component>
         <Component class="org.openswing.swing.client.EditButton" name="editButton1">
+        </Component>
+        <Component class="org.openswing.swing.client.DeleteButton" name="deleteButton1">
         </Component>
         <Component class="org.openswing.swing.client.SaveButton" name="saveButton1">
         </Component>
@@ -82,8 +86,14 @@
       <SubComponents>
         <Container class="org.openswing.swing.client.GridControl" name="gridControlFuncionario">
           <Properties>
+            <Property name="deleteButton" type="org.openswing.swing.client.DeleteButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="this.deleteButton1" type="code"/>
+            </Property>
             <Property name="editButton" type="org.openswing.swing.client.EditButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="this.editButton1" type="code"/>
+            </Property>
+            <Property name="filterButton" type="org.openswing.swing.client.FilterButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="this.filterButton1" type="code"/>
             </Property>
             <Property name="insertButton" type="org.openswing.swing.client.InsertButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="this.insertButton1" type="code"/>

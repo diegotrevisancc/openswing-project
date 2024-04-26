@@ -43,7 +43,9 @@ public class FuncionarioView extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
+        filterButton1 = new org.openswing.swing.client.FilterButton();
         editButton1 = new org.openswing.swing.client.EditButton();
+        deleteButton1 = new org.openswing.swing.client.DeleteButton();
         saveButton1 = new org.openswing.swing.client.SaveButton();
         insertButton1 = new org.openswing.swing.client.InsertButton();
         reloadButton1 = new org.openswing.swing.client.ReloadButton();
@@ -70,7 +72,9 @@ public class FuncionarioView extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(40, 40));
         jPanel1.setMinimumSize(new java.awt.Dimension(40, 40));
         jPanel1.setPreferredSize(new java.awt.Dimension(40, 40));
+        jPanel1.add(filterButton1);
         jPanel1.add(editButton1);
+        jPanel1.add(deleteButton1);
         jPanel1.add(saveButton1);
         jPanel1.add(insertButton1);
         jPanel1.add(reloadButton1);
@@ -88,7 +92,9 @@ public class FuncionarioView extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(40, 40));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
+        gridControlFuncionario.setDeleteButton(this.deleteButton1);
         gridControlFuncionario.setEditButton(this.editButton1);
+        gridControlFuncionario.setFilterButton(this.filterButton1);
         gridControlFuncionario.setInsertButton(this.insertButton1);
         gridControlFuncionario.setReloadButton(this.reloadButton1);
         gridControlFuncionario.setSaveButton(this.saveButton1);
@@ -275,7 +281,9 @@ public class FuncionarioView extends javax.swing.JFrame {
     private org.openswing.swing.table.columns.client.CurrencyColumn currencyColumnSalario;
     private org.openswing.swing.table.columns.client.DateColumn dateColumnDataEntrada;
     private org.openswing.swing.table.columns.client.DateColumn dateColumnDataSaida;
+    private org.openswing.swing.client.DeleteButton deleteButton1;
     private org.openswing.swing.client.EditButton editButton1;
+    private org.openswing.swing.client.FilterButton filterButton1;
     private org.openswing.swing.table.columns.client.FormattedTextColumn formattedTextColumnCep;
     private org.openswing.swing.client.GridControl gridControlFuncionario;
     private org.openswing.swing.client.InsertButton insertButton1;

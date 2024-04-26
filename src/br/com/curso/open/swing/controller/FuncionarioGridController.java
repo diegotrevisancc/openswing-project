@@ -33,7 +33,7 @@ public class FuncionarioGridController extends GridController implements GridDat
         this.view.getGridControlFuncionario().setController(FuncionarioGridController.this);
         this.view.getGridControlFuncionario().setGridDataLocator(FuncionarioGridController.this);
         this.view.setVisible(true);
-        this.view.getGridControlFuncionario().getTable().setDimensionFilterDialog(new Dimension(480, 500));
+        this.view.getGridControlFuncionario().getTable().setDimensionFilterDialog(new Dimension(480, 500)); //set filter component size
     }
 
     @Override
