@@ -43,6 +43,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
+        editButton1 = new org.openswing.swing.client.EditButton();
         saveButton1 = new org.openswing.swing.client.SaveButton();
         insertButton1 = new org.openswing.swing.client.InsertButton();
         reloadButton1 = new org.openswing.swing.client.ReloadButton();
@@ -69,6 +70,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(40, 40));
         jPanel1.setMinimumSize(new java.awt.Dimension(40, 40));
         jPanel1.setPreferredSize(new java.awt.Dimension(40, 40));
+        jPanel1.add(editButton1);
         jPanel1.add(saveButton1);
         jPanel1.add(insertButton1);
         jPanel1.add(reloadButton1);
@@ -86,6 +88,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(40, 40));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
+        gridControlFuncionario.setEditButton(this.editButton1);
         gridControlFuncionario.setInsertButton(this.insertButton1);
         gridControlFuncionario.setReloadButton(this.reloadButton1);
         gridControlFuncionario.setSaveButton(this.saveButton1);
@@ -95,6 +98,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         textColumnNome.setColumnFilterable(true);
         textColumnNome.setColumnName("nome");
         textColumnNome.setColumnSortable(true);
+        textColumnNome.setEditableOnEdit(true);
         textColumnNome.setEditableOnInsert(true);
         textColumnNome.setHeaderColumnName("Nome");
         gridControlFuncionario.getColumnContainer().add(textColumnNome);
@@ -102,6 +106,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         comboColumnSexo.setColumnFilterable(true);
         comboColumnSexo.setColumnName("sexo");
         comboColumnSexo.setColumnSortable(true);
+        comboColumnSexo.setEditableOnEdit(true);
         comboColumnSexo.setEditableOnInsert(true);
         comboColumnSexo.setHeaderColumnName("Sexo");
         gridControlFuncionario.getColumnContainer().add(comboColumnSexo);
@@ -110,6 +115,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         currencyColumnSalario.setColumnName("salario");
         currencyColumnSalario.setColumnRequired(false);
         currencyColumnSalario.setColumnSortable(true);
+        currencyColumnSalario.setEditableOnEdit(true);
         currencyColumnSalario.setEditableOnInsert(true);
         currencyColumnSalario.setHeaderColumnName("Salário");
         gridControlFuncionario.getColumnContainer().add(currencyColumnSalario);
@@ -117,6 +123,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         dateColumnDataEntrada.setColumnFilterable(true);
         dateColumnDataEntrada.setColumnName("data_de_entrada");
         dateColumnDataEntrada.setColumnSortable(true);
+        dateColumnDataEntrada.setEditableOnEdit(true);
         dateColumnDataEntrada.setEditableOnInsert(true);
         dateColumnDataEntrada.setHeaderColumnName("Data de Entrada");
         gridControlFuncionario.getColumnContainer().add(dateColumnDataEntrada);
@@ -125,6 +132,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         dateColumnDataSaida.setColumnName("data_de_saida");
         dateColumnDataSaida.setColumnRequired(false);
         dateColumnDataSaida.setColumnSortable(true);
+        dateColumnDataSaida.setEditableOnEdit(true);
         dateColumnDataSaida.setEditableOnInsert(true);
         dateColumnDataSaida.setHeaderColumnName("Data de Saida");
         gridControlFuncionario.getColumnContainer().add(dateColumnDataSaida);
@@ -132,6 +140,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         textColumnCidade.setColumnFilterable(true);
         textColumnCidade.setColumnName("cidade");
         textColumnCidade.setColumnSortable(true);
+        textColumnCidade.setEditableOnEdit(true);
         textColumnCidade.setEditableOnInsert(true);
         textColumnCidade.setHeaderColumnName("Cidade");
         gridControlFuncionario.getColumnContainer().add(textColumnCidade);
@@ -139,6 +148,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         textColumnLogradouro.setColumnFilterable(true);
         textColumnLogradouro.setColumnName("logradouro");
         textColumnLogradouro.setColumnSortable(true);
+        textColumnLogradouro.setEditableOnEdit(true);
         textColumnLogradouro.setEditableOnInsert(true);
         textColumnLogradouro.setHeaderColumnName("Logradouro");
         gridControlFuncionario.getColumnContainer().add(textColumnLogradouro);
@@ -147,6 +157,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         textColumnNumero.setColumnName("numero");
         textColumnNumero.setColumnRequired(false);
         textColumnNumero.setColumnSortable(true);
+        textColumnNumero.setEditableOnEdit(true);
         textColumnNumero.setEditableOnInsert(true);
         textColumnNumero.setHeaderColumnName("Numero");
         gridControlFuncionario.getColumnContainer().add(textColumnNumero);
@@ -155,6 +166,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         textColumnComplemento.setColumnName("complemento");
         textColumnComplemento.setColumnRequired(false);
         textColumnComplemento.setColumnSortable(true);
+        textColumnComplemento.setEditableOnEdit(true);
         textColumnComplemento.setEditableOnInsert(true);
         textColumnComplemento.setHeaderColumnName("Complemento");
         gridControlFuncionario.getColumnContainer().add(textColumnComplemento);
@@ -162,6 +174,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         textColumnBairro.setColumnFilterable(true);
         textColumnBairro.setColumnName("bairro");
         textColumnBairro.setColumnSortable(true);
+        textColumnBairro.setEditableOnEdit(true);
         textColumnBairro.setEditableOnInsert(true);
         textColumnBairro.setHeaderColumnName("Bairro");
         gridControlFuncionario.getColumnContainer().add(textColumnBairro);
@@ -169,6 +182,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         comboColumnUf.setColumnFilterable(true);
         comboColumnUf.setColumnName("uf");
         comboColumnUf.setColumnSortable(true);
+        comboColumnUf.setEditableOnEdit(true);
         comboColumnUf.setEditableOnInsert(true);
         comboColumnUf.setHeaderColumnName("UF");
         comboColumnUf.addActionListener(new java.awt.event.ActionListener() {
@@ -182,6 +196,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         formattedTextColumnCep.setColumnName("cep");
         formattedTextColumnCep.setColumnRequired(false);
         formattedTextColumnCep.setColumnSortable(true);
+        formattedTextColumnCep.setEditableOnEdit(true);
         formattedTextColumnCep.setEditableOnInsert(true);
         formattedTextColumnCep.setHeaderColumnName("CEP");
         gridControlFuncionario.getColumnContainer().add(formattedTextColumnCep);
@@ -190,6 +205,7 @@ public class FuncionarioView extends javax.swing.JFrame {
         codLookupColumnCargo.setColumnName("cargo");
         codLookupColumnCargo.setColumnRequired(false);
         codLookupColumnCargo.setColumnSortable(true);
+        codLookupColumnCargo.setEditableOnEdit(true);
         codLookupColumnCargo.setEditableOnInsert(true);
         codLookupColumnCargo.setEnableCodBox(false);
         codLookupColumnCargo.setHeaderColumnName("Cargo");
@@ -259,6 +275,7 @@ public class FuncionarioView extends javax.swing.JFrame {
     private org.openswing.swing.table.columns.client.CurrencyColumn currencyColumnSalario;
     private org.openswing.swing.table.columns.client.DateColumn dateColumnDataEntrada;
     private org.openswing.swing.table.columns.client.DateColumn dateColumnDataSaida;
+    private org.openswing.swing.client.EditButton editButton1;
     private org.openswing.swing.table.columns.client.FormattedTextColumn formattedTextColumnCep;
     private org.openswing.swing.client.GridControl gridControlFuncionario;
     private org.openswing.swing.client.InsertButton insertButton1;

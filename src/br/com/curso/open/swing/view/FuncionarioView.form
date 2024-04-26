@@ -47,6 +47,8 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
       <SubComponents>
+        <Component class="org.openswing.swing.client.EditButton" name="editButton1">
+        </Component>
         <Component class="org.openswing.swing.client.SaveButton" name="saveButton1">
         </Component>
         <Component class="org.openswing.swing.client.InsertButton" name="insertButton1">
@@ -80,6 +82,9 @@
       <SubComponents>
         <Container class="org.openswing.swing.client.GridControl" name="gridControlFuncionario">
           <Properties>
+            <Property name="editButton" type="org.openswing.swing.client.EditButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="this.editButton1" type="code"/>
+            </Property>
             <Property name="insertButton" type="org.openswing.swing.client.InsertButton" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="this.insertButton1" type="code"/>
             </Property>
@@ -111,6 +116,7 @@
                   <Connection code="&quot;nome&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Nome"/>
               </Properties>
@@ -122,6 +128,7 @@
                   <Connection code="&quot;sexo&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Sexo"/>
               </Properties>
@@ -134,6 +141,7 @@
                 </Property>
                 <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Sal&#xe1;rio"/>
               </Properties>
@@ -145,6 +153,7 @@
                   <Connection code="&quot;data_de_entrada&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Data de Entrada"/>
               </Properties>
@@ -157,6 +166,7 @@
                 </Property>
                 <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Data de Saida"/>
               </Properties>
@@ -168,6 +178,7 @@
                   <Connection code="&quot;cidade&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Cidade"/>
               </Properties>
@@ -179,6 +190,7 @@
                   <Connection code="&quot;logradouro&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Logradouro"/>
               </Properties>
@@ -191,6 +203,7 @@
                 </Property>
                 <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Numero"/>
               </Properties>
@@ -203,6 +216,7 @@
                 </Property>
                 <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Complemento"/>
               </Properties>
@@ -214,6 +228,7 @@
                   <Connection code="&quot;bairro&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Bairro"/>
               </Properties>
@@ -225,6 +240,7 @@
                   <Connection code="&quot;uf&quot;" type="code"/>
                 </Property>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="UF"/>
               </Properties>
@@ -240,6 +256,7 @@
                 </Property>
                 <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="CEP"/>
               </Properties>
@@ -252,6 +269,7 @@
                 </Property>
                 <Property name="columnRequired" type="boolean" value="false"/>
                 <Property name="columnSortable" type="boolean" value="true"/>
+                <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="enableCodBox" type="boolean" value="false"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Cargo"/>
